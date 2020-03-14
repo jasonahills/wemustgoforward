@@ -1,0 +1,12 @@
+.spaced-sides {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.spaced-sides:last-child {
+  margin-right: 0px;
+}
+
+.spaced-sides:first-child {
+  margin-left: 0px;
+}

@@ -11,10 +11,11 @@
   display: flex;
   position: relative;
   flex-direction: column;
+  flex-grow: 0;
   align-items: center;
   text-align: left;
   font-family: Helvetica, Arial, sans-serif;
-  padding: 30px 0;
+  padding: 20px 0;
   padding-left: var(--page-side-margins);
   padding-right: var(--page-side-margins);
 }
@@ -28,6 +29,7 @@
 
 .app-content {
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   position: relative;
   align-items: center;
@@ -37,6 +39,7 @@
 
 .app-footer {
   display: flex;
+  flex-grow: 0;
   flex-direction: row;
   justify-content: center;
   padding: 15px var(--page-side-margins);

@@ -5,6 +5,7 @@ import moment from "moment"
 import React from "react"
 import { useEffect, useRef, useState } from "react" 
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export function TextEditor() {
   const textAreaEl: React.Ref<HTMLTextAreaElement> = useRef(null)
   // const promptEl: React.Ref<HTMLTextAreaElement> = useRef(null)
@@ -22,9 +23,9 @@ export function TextEditor() {
     focusTextArea()
   }, []);
 
-  let numWords = _.compact(text.split(/\s/)).length
+  const numWords = _.compact(text.split(/\s/)).length
 
-  const updateText = (e:React.ChangeEvent<HTMLTextAreaElement>) => {
+  const updateText = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newText = e.target.value
     if (text.length < newText.length) {
       setText(newText)
@@ -45,9 +46,11 @@ export function TextEditor() {
 
   return <div className="text-editor">
     <div className="text-editor-prompt">
-      <span>{prompt}</span>
-      <button className="button" onClick={newPrompt}>New Prompt</button>
-      <button className="button" onClick={noPrompt}>No Prompt</button>
+      <span className="spaced-sides">{prompt}</span>
+      <span className="text-editor-prompt-buttons spaced-sides">
+        <button className="button spaced-sides" onClick={newPrompt}>New Prompt</button>
+        <button className="button spaced-sides" onClick={noPrompt}>No Prompt</button>
+      </span>
     </div>
     <div className="text-editor-main">
       <textarea 
@@ -60,11 +63,11 @@ export function TextEditor() {
     </div>
     <div className="text-editor-commands">
       <a
-        className="a"
+        className="button"
         href={downloadHref(text)}
         download={downloadFilename()}
       >
-        Download
+        Download your response.
       </a>
     </div>
     <footer className="text-editor-footer">
@@ -73,7 +76,7 @@ export function TextEditor() {
   </div>
 }
 
-function randomPrompt():string {
+function randomPrompt(): string {
   // TOOD: get from API
   const prompts = [
     "When your eyes adjust to the darkness, you see another figure.",

@@ -10,11 +10,17 @@
   --dark: #6B8A00;
   --darker: #4B6100;
  */
-  --lighter: #FF4624;
+  /* --lighter: #FF4624;
   --light: #FF2800;
   --mid: #CC2000;
   --dark: #991800;
-  --darker: #580E00;
+  --darker: #580E00; */
+
+  --lighter: white;
+  --light: white;
+  --mid: #111;
+  --dark: #111;
+  --darker: #111;
 
   /* Measurements */
   --app-width: 1080px;

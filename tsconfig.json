@@ -27,6 +27,10 @@
     "strictBindCallApply" : true,
     "strictFunctionTypes" : true,
     "strictPropertyInitialization" : true,
+    "baseUrl": ".",
+    "paths": {
+      "wmgf/*": ["src/*"]
+    }
   },
   "include": [
     "src"

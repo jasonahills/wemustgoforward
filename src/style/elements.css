@@ -1,7 +1,8 @@
 .button {
-  color: var(--text-inverted);
-  background-color: var(--mid);
-  border: 0px solid var(--mid);
+  color: var(--text);
+  font-size: var(--txt-small);
+  background-color: var(--bg);
+  border: 1px solid var(--mid);
   border-radius: 5px;
   padding: 3px 6px;
   text-decoration: none;
@@ -10,6 +11,7 @@
 
 .button:hover {
   background-color: var(--darker);
+  color: var(--text-inverted);
 }
 
 .button:focus {
@@ -17,7 +19,9 @@
 }
 
 .button:active {
-  outline: none
+  outline: none;
+  background-color: var(--darker);
+  color: var(--text-inverted);
 }
 
 .a {

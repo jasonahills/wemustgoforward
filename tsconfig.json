@@ -17,7 +17,16 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "jsx": "react",
+    "removeComments": true,
+    "strictNullChecks": true,
+    "noImplicitThis" : true,
+    "alwaysStrict" : true,
+    "strictBindCallApply" : true,
+    "strictFunctionTypes" : true,
+    "strictPropertyInitialization" : true,
   },
   "include": [
     "src"

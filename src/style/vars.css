@@ -1,0 +1,27 @@
+:root {
+  /* COLORS */
+  --bg: white;
+  --bg-dark: darkgrey;
+  --text: #111;
+  --text-inverted: white;
+  /* --lighter: #BEE243;
+  --light: #A8D314;
+  --mid: #86AB05;
+  --dark: #6B8A00;
+  --darker: #4B6100;
+ */
+  --lighter: #FF4624;
+  --light: #FF2800;
+  --mid: #CC2000;
+  --dark: #991800;
+  --darker: #580E00;
+
+  /* Measurements */
+  --app-width: 1080px;
+  --page-side-margins: 30px;
+
+  /* Text */
+  --txt-large: 24px;
+  --txt: 16px;
+  --txt-small: 10px
+}

@@ -1,0 +1,35 @@
+.text-editor {
+  max-width: var(--app-width);
+  width: 100%;
+}
+
+.text-editor-prompt {
+  margin: 10px 0;
+}
+
+.text-editor-main {
+  margin: 10px 0;
+}
+
+.text-editor-text-area {
+  font-size: var(--txt);
+  font-family: monospace;
+  width: 100%;
+  height: 60vh;
+  resize: none;
+  padding: 20px 0;
+  border: 0px solid transparent;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.text-editor-text-area:focus {
+  outline: none !important;
+}
+
+.text-editor-commands {
+  margin: 10px 0;
+}
+
+.text-editor-footer {
+  margin: 10px 0;
+}

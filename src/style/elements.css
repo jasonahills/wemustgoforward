@@ -1,0 +1,29 @@
+.button {
+  color: var(--text-inverted);
+  background-color: var(--mid);
+  border: 0px solid var(--mid);
+  border-radius: 5px;
+  padding: 3px 6px;
+  text-decoration: none;
+  transition: background-color 200ms ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--darker);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:active {
+  outline: none
+}
+
+.a {
+  color: var(--dark);
+}
+
+.a:visited {
+  color: var(--darker);
+}

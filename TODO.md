@@ -1,5 +1,4 @@
 # Pre first release
-[ ] push notification
 [ ] favicon
 [ ] more prompts
 [ ] better file name
@@ -19,4 +18,6 @@
 # Features
 [ ] logo
 [ ] control s to save
+[ ] push notification
 [ ] push notification schedule
+[ ] show prompt in notification

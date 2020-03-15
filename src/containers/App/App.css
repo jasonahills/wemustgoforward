@@ -20,11 +20,15 @@
   padding-right: var(--page-side-margins);
 }
 
-.app-header-logo {
+.app-header-logo-container {
   font-size: var(--txt-large);
   width: 100%;
   max-width: var(--app-width);
   color: var(--darker);
+}
+
+.app-header-logo {
+  width: 70px;
 }
 
 .app-content {

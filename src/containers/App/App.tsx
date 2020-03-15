@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <div className="app-header-logo">
-          We Must Go Forward
+        <div className="app-header-logo-container">
+          <img className="app-header-logo" src="/logo.png"/>
         </div>
       </header>
       <div className="app-content">

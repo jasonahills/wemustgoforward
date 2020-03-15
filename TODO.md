@@ -1,12 +1,6 @@
 # Pre first release
-[ ] favicon
 [ ] more prompts
 [ ] better file name
-[ ] deploy to server
-  [ ] dns stuff
-  [ ] cert
-  [ ] nginx config
-  [ ] deploy script
 
 # Dev stuff
 [ ] autoformat
@@ -21,3 +15,4 @@
 [ ] push notification
 [ ] push notification schedule
 [ ] show prompt in notification
+[ ] click button should respond in some way

@@ -59,6 +59,10 @@ export function TextEditor() {
         placeholder="Enter your text here. No deleting. You can edit your work after you download it."
         value={text} 
         onChange={updateText}
+        autoComplete="off"
+        autoCorrect="off"
+        autoCapitalize="off"
+        spellCheck="false"
       />
     </div>
     <div className="text-editor-commands">

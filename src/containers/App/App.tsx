@@ -9,7 +9,7 @@ function App() {
     <div className="app">
       <header className="app-header">
         <div className="app-header-logo-container">
-          <img className="app-header-logo" src="/logo.png"/>
+          <img className="app-header-logo" src="/logo.png" alt="WMGF"/>
         </div>
       </header>
       <div className="app-content">

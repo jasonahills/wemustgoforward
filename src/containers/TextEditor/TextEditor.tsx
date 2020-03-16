@@ -5,6 +5,8 @@ import moment from "moment"
 import React from "react"
 import { useEffect, useRef, useState } from "react" 
 
+import { prompts } from "./prompts"
+
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export function TextEditor() {
   const textAreaEl: React.Ref<HTMLTextAreaElement> = useRef(null)
@@ -27,7 +29,7 @@ export function TextEditor() {
 
   const updateText = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newText = e.target.value
-    if (text.length < newText.length) {
+    if (text.length <= newText.length) {  // allow for letter changes, e.g. n to ñ
       setText(newText)
     }
   }
@@ -56,7 +58,7 @@ export function TextEditor() {
       <textarea 
         ref={textAreaEl}
         className="text-editor-text-area"
-        placeholder="Enter your text here. No deleting. You can edit your work after you download it."
+        placeholder="Enter your response here. No deleting. You can edit your work after you download it."
         value={text} 
         onChange={updateText}
         autoComplete="off"
@@ -69,7 +71,7 @@ export function TextEditor() {
       <a
         className="button"
         href={downloadHref(text)}
-        download={downloadFilename()}
+        download={downloadFilename(prompt)}
       >
         Download your response.
       </a>
@@ -82,10 +84,6 @@ export function TextEditor() {
 
 function randomPrompt(): string {
   // TOOD: get from API
-  const prompts = [
-    "When your eyes adjust to the darkness, you see another figure.",
-    "100 writing prompts",
-  ]
   const index = Math.floor(Math.random() * prompts.length)
   return prompts[index]  // TODO: Typescript should not be ok with this, because it could be undefined.
 }
@@ -95,8 +93,11 @@ function downloadHref(text: string): string {
   return `data:text/plain;charset=utf-8,${encodeURIComponent(text)}`
 }
 
-function downloadFilename(): string {
+function downloadFilename(prompt: string): string {
   // TODO: prompts should be part of filename
+  const slugFromPrompt = prompt.replace(/\s/g, "_").replace(/\W/g, '').substring(0, 30)
+  const slug = (slugFromPrompt === "") ? "writing-exercise" : slugFromPrompt
+
   const isoDate = moment().format("YYYY-MM-DD")
-  return `${isoDate}_writing-prompt.txt`
+  return `${isoDate}_${slug}.txt`
 }

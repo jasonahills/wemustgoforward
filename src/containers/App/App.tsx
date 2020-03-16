@@ -1,7 +1,9 @@
 import React from 'react';
-// import logo from './logo.svg';
-import { TextEditor } from "../TextEditor/TextEditor"
+
+import * as cfg from "wmgf/config"
+import { TextEditor } from "wmgf/containers/TextEditor/TextEditor"
 import './App.css'
+
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 function App() {
@@ -31,7 +33,8 @@ function App() {
       </header> */}
       <footer className="app-footer">
         <div className="app-footer-inner">
-          Send prompt ideas and feedback to <a className="a" href="mailto:wemustgoforwardapp@gmail.com">wemustgoforwardapp@gmail.com</a>.
+          <span>Send prompt ideas and feedback to <a className="a" href="mailto:wemustgoforwardapp@gmail.com">wemustgoforwardapp@gmail.com</a>.</span>
+          <span>{cfg.version}</span>
         </div>
       </footer>
     </div>

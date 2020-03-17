@@ -10,3 +10,8 @@
 .spaced-sides:first-child {
   margin-left: 0px;
 }
+
+.spaced-tiny {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}

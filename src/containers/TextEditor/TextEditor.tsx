@@ -48,10 +48,10 @@ export function TextEditor() {
 
   return <div className="text-editor">
     <div className="text-editor-prompt">
-      <span className="spaced-sides">{prompt}</span>
+      <span className="spaced-sides spaced-tiny">{prompt}</span>
       <span className="text-editor-prompt-buttons spaced-sides">
-        <button className="button spaced-sides" onClick={newPrompt}>New Prompt</button>
-        <button className="button spaced-sides" onClick={noPrompt}>No Prompt</button>
+        <button className="button spaced-sides spaced-tiny" onClick={newPrompt}>New Prompt</button>
+        <button className="button spaced-sides spaced-tiny" onClick={noPrompt}>No Prompt</button>
       </span>
     </div>
     <div className="text-editor-main">

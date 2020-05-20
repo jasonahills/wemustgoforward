@@ -3,14 +3,13 @@ import './style.css';
 import _ from "lodash"
 import moment from "moment"
 import React from "react"
-import { useEffect, useRef, useState } from "react" 
+import { useEffect, useRef, useState } from "react"
 
 import { prompts } from "./prompts"
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export function TextEditor() {
   const textAreaEl: React.Ref<HTMLTextAreaElement> = useRef(null)
-  // const promptEl: React.Ref<HTMLTextAreaElement> = useRef(null)
 
   const [prompt, setPrompt] = useState(randomPrompt())
   const [text, setText] = useState("")
@@ -23,7 +22,7 @@ export function TextEditor() {
   // Component has mounted
   useEffect(() => {
     focusTextArea()
-  }, []);
+  }, [])
 
   const numWords = _.compact(text.split(/\s/)).length
 
@@ -55,11 +54,11 @@ export function TextEditor() {
       </span>
     </div>
     <div className="text-editor-main">
-      <textarea 
+      <textarea
         ref={textAreaEl}
         className="text-editor-text-area"
         placeholder="Enter your response here. No deleting. You can edit your work after you download it."
-        value={text} 
+        value={text}
         onChange={updateText}
         autoComplete="off"
         autoCorrect="off"

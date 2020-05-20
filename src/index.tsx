@@ -5,7 +5,7 @@ import 'wmgf/style/index.css';
 import 'wmgf/style/text.css';
 import 'wmgf/style/elements.css';
 import 'wmgf/style/layout.css';
-import App from 'wmgf/containers/App/App';
+import App from 'wmgf/containers/App/component';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));

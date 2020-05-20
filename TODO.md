@@ -2,7 +2,7 @@
 [ ] autoformat
 [ ] pwa for offline use
 [ ] css reset
-[ ] standardize names (component.tsx, etc.)
+[ ] eslint no semicolons, standard quotes
 
 # Features
 [ ] control s to save

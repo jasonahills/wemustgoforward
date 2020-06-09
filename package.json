@@ -2,6 +2,7 @@
   "name": "wemustgoforward",
   "version": "0.1.1",
   "private": true,
+  "license": "MIT",
   "dependencies": {
     "@babel/core": "7.8.4",
     "@svgr/webpack": "4.3.3",
